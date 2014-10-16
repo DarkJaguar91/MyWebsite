@@ -10,6 +10,10 @@ angular.module('BTalbot', [
             url: '/about',
             templateUrl: 'views/about.html'
         })
+        .state('work', {
+            url: '/work',
+            templateUrl: 'views/work.html'
+        })
         .state('education', {
             url: '/education',
             templateUrl: 'views/education.html'
@@ -18,15 +22,35 @@ angular.module('BTalbot', [
             url: '/projects',
             templateUrl: 'views/projects.html',
             controller: function ($state){
-                $state.go('projects.huffmansqueeze')
+                $state.go('projects.bbngame')
             }
         })
-        .state('projects.huffmansqueeze', {
-            url: '/projects/huffmansqueeze',
-            templateUrl: 'views/projects/huffmans.html'
+        .state('projects.bbngame', {
+            url: '/bbngame',
+            templateUrl: 'views/projects/bbngame.html'
+        })
+        .state('projects.pulsar', {
+            url: '/pulsar',
+            templateUrl: 'views/projects/pulsar.html'
+        })
+        .state('projects.cudasqueeze', {
+            url: '/cudasqueeze',
+            templateUrl: 'views/projects/cudasqueeze.html'
+        })
+        .state('projects.exceleditor', {
+            url: '/exceleditor',
+            templateUrl: 'views/projects/exceleditor.html'
         })
         .state('projects.flydragonfly', {
-            url: '/projects/flydragonfly',
+            url: '/flydragonfly',
             templateUrl: 'views/projects/flydragonfly.html'
+        })
+        .state('projects.heightmapanalyzer', {
+            url: '/heightmapanalyzer',
+            templateUrl: 'views/projects/heightmapanalyzer.html'
+        })
+        .state('sporting', {
+            url: '/sproting',
+            templateUrl: 'views/sporting.html'
         });
 });

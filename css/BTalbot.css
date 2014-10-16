@@ -3,21 +3,37 @@ body {
     color: #f5f5f5;
 }
 
-.banner {
-    display: block!important;
-    width: 775px;
-    margin: auto;
-    border-radius: 20px;
+@media (min-width: 775px){
+    .banner {
+        display: block!important;
+        max-width: 775px;
+        margin: auto;
+        border-radius: 20px;
+    }
+}
+
+@media (max-width: 774px){
+    .banner {
+        display: block!important;
+        max-width: 100%;
+        margin: auto;
+        border-radius: 20px;
+    }
 }
 
 .main-container {
-    position: absolute;
+    position: relative;
     display: block!important;
     width: 80%;
     left: 10%;
     background-color: rgba(35, 35, 35, 1);
     border-radius: 15px;
     padding: 10px;
+}
+
+.main-container.ng-enter,
+.main-container.ng-leave {
+    position: absolute;
 }
 
 .main-container.ng-enter {
@@ -36,10 +52,28 @@ body {
 
 .main-container div.well {
     background-color: rgba(45, 45, 45, 1);
+    border-color: rgb(5, 50, 150);
+}
+
+.main-container h1 {
+    color: rgb(180, 118, 21);
+}
+
+.main-container h2 {
+    color: rgb(230, 105, 14);
+    padding-left: 35px;
+}
+
+.main-container p {
+    padding-left: 50px;
+}
+
+.main-container ul.content {
+    padding-left: 70px;
 }
 
 .projects-container {
-    position: absolute;
+    position: relative;
     display: block!important;
     background-color: rgba(45, 45, 45, 1);
     border-radius: 15px;
@@ -47,12 +81,17 @@ body {
     padding: 5px;
 }
 
+.projects-container.ng-enter,
+.projects-container.ng-leave {
+    position: absolute;
+}
+
 .projects-container.ng-enter {
-    -webkit-animation: fadeIn 1s;
-    animation: fadeIn 1s;
+    -webkit-animation: zoomIn 1s;
+    animation: zoomIn 1s;
 }
 
 .projects-container.ng-leave {
-    -webkit-animation: fadeOut 1s;
-    animation: fadeOut 1s;
+    -webkit-animation: zoomOut 1s;
+    animation: zoomOut 1s;
 }
